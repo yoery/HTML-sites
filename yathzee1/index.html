@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yahtzee</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body">
+    <div class="container containerScore">
+
+        
+
+        <div class="containerScoreUpper">
+            
+            <div class="scoreItem scoreItem-1 row1">
+                <strong>YAHTZEE</strong>
+            </div>
+            <div class="scoreItem scoreItem-2 row1">
+                <strong>Punten telling</strong>
+            </div>
+            <div class="scoreItem scoreItem-3 row1">
+                <strong>Speler 1</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-4">
+                <strong>Enen</strong>
+            </div>
+            <div class="scoreItem scoreItem-5">Totaal enen</div>
+            <div class="scoreItem scoreItem-6 scoreField" id="score1" onclick="CheckNumbers(1)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-7">
+                <strong>Tweeën</strong>
+            </div>
+            <div class="scoreItem scoreItem-8">Totaal tweeën</div>
+            <div class="scoreItem scoreItem-9 scoreField" id="score2" onclick="CheckNumbers(2)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class=" scoreItem scoreItem-10">
+                <strong>Drieën</strong>
+            </div>
+            <div class="scoreItem scoreItem-11">Totaal drieën</div>
+            <div class="scoreItem scoreItem-12 scoreField" id="score3" onclick="CheckNumbers(3)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class=" scoreItem scoreItem-13">
+                <strong>Vieren</strong>
+            </div>
+            <div class="scoreItem scoreItem-14">Totaal vieren</div>
+            <div class="scoreItem scoreItem-15 scoreField" id="score4" onclick="CheckNumbers(4)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class=" scoreItem scoreItem-16">
+                <strong>Vijven</strong>
+            </div>
+            <div class="scoreItem scoreItem-17">Totaal vijven</div>
+            <div class="scoreItem scoreItem-18 scoreField" id="score5" onclick="CheckNumbers(5)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class=" scoreItem scoreItem-19">
+                <strong>Zessen</strong>
+            </div>
+            <div class="scoreItem scoreItem-20">Totaal zessen</div>
+            <div class="scoreItem scoreItem-21 scoreField" id="score6" onclick="CheckNumbers(6)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class=" scoreItem scoreItem-22 scoreItemLong">
+                <strong>Totaal aantal punten</strong>
+            </div>
+            <div class="scoreItem scoreItem-23 scoreField" id="totalScore" onclick="TotalScore()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-24">
+                <strong>Bonus pnt (min 63)</strong>
+            </div>
+            <div class="scoreItem scoreItem-25">35 punten</div>
+            <div class="scoreItem scoreItem-26 scoreField scoreField" id="bonus" onclick="GetBonus()"></div>
+
+            
+            <div class="scoreItem scoreItem-27 scoreItemLong">
+                <strong>Totaal van bovenste helft </strong>
+            </div>
+            <div class="scoreItem scoreItem-28 scoreField scoreField totalUp">
+                <strong>-</strong>
+            </div>
+        </div>
+
+       
+
+        <div class="containerScoreLower">
+            
+            <div class="scoreItem scoreItem-29">
+                <strong>Three of a kind</strong>
+            </div>
+            <div class="scoreItem scoreItem-30">Totaal v.d. 5 stenen</div>
+            <div class="scoreItem scoreItem-31 scoreField" id="OfKind3" onclick="OfKind(3)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-32">
+                <strong>Carré (4 dezelfde)</strong>
+            </div>
+            <div class="scoreItem scoreItem-33">Totaal v.d. 5 stenen</div>
+            <div class="scoreItem scoreItem-34 scoreField" id="OfKind4" onclick="OfKind(4)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-35">
+                <strong>Full house</strong>
+            </div>
+            <div class="scoreItem scoreItem-36">25 punten</div>
+            <div class="scoreItem scoreItem-37 scoreField" id="fullHouse" onclick="FullHouse()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-38">
+                <strong>Kleine straat</strong>
+            </div>
+            <div class="scoreItem scoreItem-39">30 punten</div>
+            <div class="scoreItem scoreItem-40 scoreField" id="straatKlein" onclick="SmallStreet()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-41">
+                <strong>Grote straat</strong>
+            </div>
+            <div class="scoreItem scoreItem-42">40 punten</div>
+            <div class="scoreItem scoreItem-43 scoreField" id="straatGroot" onclick="BigStreet()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-44">
+                <strong>Yahtzee (5 dezelfde)</strong>
+            </div>
+            <div class="scoreItem scoreItem-45">50 punten</div>
+            <div class="scoreItem scoreItem-46 scoreField" id="yahtzee" onclick="Yahtzee(5)">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-47">
+                <strong>Chance</strong>
+            </div>
+            <div class="scoreItem scoreItem-48">Totaal v.d. 5 stenen</div>
+            <div class="scoreItem scoreItem-49 scoreField" id="chance" onclick="Chance()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-50 scoreItemLong">
+                <strong>Totaal onderste helft</strong>
+            </div>
+            <div class="scoreItem scoreItem-51 scoreField" id="totalUnder" onclick="TotalUnder()">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-52 scoreItemLong">
+                <strong>Totaal bovenste helft</strong>
+            </div>
+            <div class="scoreItem scoreItem-53 scoreField totalUp" id="totalUp">
+                <strong>-</strong>
+            </div>
+
+            
+            <div class="scoreItem scoreItem-54 scoreItemLong">
+                <strong>Totaal</strong>
+            </div>
+            <div class="scoreItem scoreItem-55 scoreField" id="totalAll" onclick="TotalAll()">
+                <strong>-</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="container containerDobbelstenen">
+        <div class="dobbelsteenDeel dobbelstenenBoven">
+            <div class="dobbelsteen dobbelsteen1" id="dice1" onclick="HoldDice(0)">Dice</div>
+            <div class="dobbelsteen dobbelsteen2" id="dice2" onclick="HoldDice(1)">Dice</div>
+        </div>
+        <div class="dobbelsteenDeel dobbelstenenOnder">
+            <div class="dobbelsteen dobbelsteen3" id="dice3" onclick="HoldDice(2)">Dice</div>
+            <div class="dobbelsteen dobbelsteen4" id="dice4" onclick="HoldDice(3)">Dice</div>
+            <div class="dobbelsteen dobbelsteen5" id="dice5" onclick="HoldDice(4)">Dice</div>
+        </div>
+    </div>
+
+    <div class="container containerRolknop">
+        <button class="rolknop" onclick="myfunction()">Klik om te rollen</button>
+    </div>
+    <div>
+        <button class="restart">RESTART</button>
+    </div>
+    <div class="h2"><h2>ROLES LEFT:<span id="span"></span></h2></div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
