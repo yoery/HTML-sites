@@ -1,0 +1,203 @@
+*::before, *, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: monospace;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+}
+
+.body{
+    background-color: gray;
+    background-size: 2000px;
+    
+    
+}
+.amongif{
+    min-width: 1300px;
+    width: 100%;
+    margin-top: 0px;
+    height: 700px;
+    border: none;
+    image-rendering: optimizeQuality;
+}
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    font-size: 150px;
+    color: white;
+    margin-top: -450px;
+    text-align: center;
+}
+
+
+.border{    
+    display: flex;
+    padding: 240px;
+    padding-left: 200px;
+    white-space: nowrap;
+}
+.buttons{
+    background-color: black;
+    color: white;
+    border: 3px solid orangered;
+    height: 100px;
+    min-width: 200px;
+    width: 100%;
+    font-size: x-large;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    line-height: 90px;
+}
+
+.buttons:active{
+    background-color: orchid;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+a:active{
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .border{
+        flex-flow: column;
+    }
+  }
+
+
+.foot{
+    color: black;
+    background-color: lightgray;
+    height: 225px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: large;
+    margin-top: 200px;
+    
+
+}
+
+.maps{
+    height: 200px;
+    margin-top: -100px;
+    margin-left: 300px
+}
+
+.move{
+    display: flex;
+    justify-content: center;
+}
+nav{
+ position: relative;
+ width: 600px;
+ height: 50px;
+ background: #34495e;
+ border-radius: 8px;
+ font-size: 0px;
+}
+
+nav a{
+    font-size:  12px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: red;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+    width: 100px;
+}
+nav .start-home,a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0px;
+}
+
+nav a:nth-child(2){
+    width: 110px;
+}
+nav .start-about,a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+nav a:nth-child(3){
+    width: 100px;
+}
+
+nav .start-blog,a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+nav a:nth-child(4){
+    width: 160px;
+}
+
+nav .start-portofolio,a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+nav a:nth-child(5){
+    width: 120px;
+}
+
+nav .start-contact,a:nth-child(5):hover~.animation{
+    width: 130px;
+    left: 470px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .move{
+        flex-flow: column;
+    }
+}
+
+
+.h2{
+    color: white;
+    font-family: 'Gill wGill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.par{
+    text-align: center;
+}
+

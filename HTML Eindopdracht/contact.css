@@ -1,0 +1,228 @@
+*::before, *, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: monospace;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+}
+body{
+    background-color: gray;
+}
+.move{
+    display: flex;
+    justify-content: center;
+}
+  nav{
+    position: relative;
+    width: 600px;
+    height: 50px;
+    background: #34495e;
+    border-radius: 8px;
+    font-size: 0px;
+}
+
+nav a{
+    font-size:  12px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: yellow;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+    width: 100px;
+}
+nav .start-home,a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0px;
+}
+
+nav a:nth-child(2){
+    width: 110px;
+}
+nav .start-about,a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+nav a:nth-child(3){
+    width: 100px;
+}
+
+nav .start-blog,a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+nav a:nth-child(4){
+    width: 160px;
+}
+
+nav .start-portofolio,a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+nav a:nth-child(5){
+    width: 120px;
+}
+
+nav .start-contact,a:nth-child(5):hover~.animation{
+    width: 130px;
+    left: 470px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .move{
+        flex-flow: column;
+    }
+}
+
+.flexy{
+    display: flex;
+    justify-content: center;
+}
+.inputBox{
+    width: 250px;
+    position: relative;
+    padding-top: 50px;
+    
+}
+
+.inputBox input{
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid gray;
+    background-color: yellow;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 20px;
+    color: gray;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: darkcyan;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 11px;
+    padding: 0 10px;
+    background: yellow;
+    border-left: 2px solid darkcyan;
+    border-right: 2px solid darkcyan;
+    letter-spacing: 0.2em;
+}
+
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border: 2px solid darkcyan;
+}
+
+.h1{
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    font-size: xx-large;
+}
+
+.sus{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.foot{
+    color: black;
+    background-color: lightgray;
+    height: 225px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: large;
+    margin-top: 200px;
+    
+
+}
+
+.maps{
+    height: 200px;
+    margin-top: -100px;
+    margin-left: 300px
+}
+
+.par{
+    text-align: center;
+}
+
+.border{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    white-space: nowrap;
+}
+.buttons{
+    background-color: yellow;
+    color: black;
+    border: 3px solid orangered;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+.buttons:active{
+    background-color: orchid;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    text-decoration: none;
+    color: black;
+}
+
